@@ -8,19 +8,17 @@ const massUnit = document.getElementById("mass-unit")
 1 meter = 3.281 feet
 1 liter = 0.264 gallon
 1 kilogram = 2.204 pound
-
-20 meters = 65.616 feet | 20 feet = 6.096 meters
-20 liters = 5.284 gallons | 20 gallons = 75.708 liters
-20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos
 */
 
-const meterToFeet = input.value * 3.281
-const feetToMeter = input.value / 3.281
-
-const literToGallon = input.value * 0.264
-const gallonTo
+lengthUnit.textContent = "No Input"
+volumeUnit.textContent = "No Input"
+massUnit.textContent = "No Input"
 
 btn.addEventListener("click", function(){
-    lengthUnit.textContent = input.value
+    lengthUnit.textContent = `${input.value} meters = ${(input.value * 3.281).toFixed(3)} feet | ${input.value} feet = ${(input.value /3.281).toFixed(3)} meters`
+
+    volumeUnit.textContent = `${input.value} liters = ${(input.value * 0.264).toFixed(3)} gallons | ${input.value} gallons = ${(input.value / 0.264).toFixed(3)} liters`
+
+    massUnit.textContent = `${input.value} kilograms = ${(input.value * 2.204).toFixed(3)} pounds | ${input.value} pounds = ${(input.value / 2.204).toFixed(3)} kilograms`
 })
 
